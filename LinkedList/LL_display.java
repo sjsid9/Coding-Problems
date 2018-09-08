@@ -150,5 +150,22 @@ public void addAt(int item, int idx) throws Exception {
 		}
 	}
 
+public int removeFirst() throws Exception {
+
+		if (this.size == 0) {
+			throw new Exception("LL is Empty");
+		}
+		int rv = this.head.data;
+		if (this.size == 1) {
+			this.head = null;
+			this.tail = null;
+			this.size = 0;
+		} else {
+			this.head = this.head.next;
+			this.size--;
+		}
+		return rv;
+	}
+
 
 }
