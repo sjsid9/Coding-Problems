@@ -67,6 +67,14 @@ public Node getNodeAt(int idx) throws Exception {
 		return temp;
 
 	}
+	public int getFirst() throws Exception {
+
+		if (this.size == 0) {
+			throw new Exception("LL is Empty");
+		}
+
+		return this.head.data;
+	}
 
 
 }
