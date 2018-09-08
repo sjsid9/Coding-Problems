@@ -166,6 +166,25 @@ public int removeFirst() throws Exception {
 		}
 		return rv;
 	}
+public int removeLast() throws Exception {
+
+		if (this.size == 0) {
+			throw new Exception("LL is Empty");
+		}
+
+		int rv = this.tail.data;
+		if (this.size == 1) {
+			this.head = null;
+			this.tail = null;
+			this.size = 0;
+		} else {
+			Node nn = getNodeAt(this.size - 2);
+			this.tail = nn;
+			this.tail.next = null;
+			this.size--;
+		}
+		return rv;
+	}
 
 
 }
