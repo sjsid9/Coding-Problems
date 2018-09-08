@@ -186,5 +186,27 @@ public int removeLast() throws Exception {
 		return rv;
 	}
 
+public int removeAt(int idx) throws Exception {
+
+		if (idx < 0 || idx >= size) {
+			throw new Exception("Invalid Index");
+		}
+		int rv;
+		if (idx == 0) {
+			return removeFirst();
+		} else if (idx == this.size - 1) {
+			return removeLast();
+		} else {
+			Node pn = getNodeAt(idx - 1);
+			Node nn = pn.next;
+			rv = nn.data;
+			pn.next = nn.next;
+			nn.next = null;
+			this.size--;
+			return rv;
+		}
+
+	}
+
 
 }
