@@ -105,5 +105,25 @@ public void addLast(int item) {
 
 	}
 
+public void addFirst(int item) {
+
+		Node nn = new Node();
+
+		nn.data = item;
+		nn.next = this.head;
+
+		if (size > 0) {
+			this.head = nn;
+			this.size++;
+		}
+
+		if (size == 0) {
+			this.head = nn;
+			this.tail = nn;
+			this.size++;
+		}
+
+	}
+
 
 }
