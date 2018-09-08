@@ -40,6 +40,13 @@ public int getAt(int idx) throws Exception {
 		return temp.data;
 
 	}
+public int size() {
+		return this.size;
+	}
+
+	public boolean isEmpty() {
+		return this.size == 0;
+	}
 
 
 }
