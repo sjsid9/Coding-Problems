@@ -75,6 +75,14 @@ public Node getNodeAt(int idx) throws Exception {
 
 		return this.head.data;
 	}
+public int getLast() throws Exception {
+
+		if (this.size == 0) {
+			throw new Exception("LL is Empty");
+		}
+
+		return this.tail.data;
+	}
 
 
 }
