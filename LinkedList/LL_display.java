@@ -83,6 +83,27 @@ public int getLast() throws Exception {
 
 		return this.tail.data;
 	}
+public void addLast(int item) {
+
+		Node nn = new Node();
+
+		nn.data = item;
+		nn.next = null;
+
+		if (size > 0) {
+			this.tail.next = nn;
+		}
+
+		if (size == 0) {
+			this.head = nn;
+			this.tail = nn;
+			this.size++;
+		} else {
+			this.tail = nn;
+			this.size++;
+		}
+
+	}
 
 
 }
