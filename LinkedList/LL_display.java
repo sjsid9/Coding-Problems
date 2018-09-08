@@ -125,5 +125,30 @@ public void addFirst(int item) {
 
 	}
 
+public void addAt(int item, int idx) throws Exception {
+
+		if (idx < 0 || idx > size) {
+			throw new Exception("Invalid Index");
+		}
+
+		if (idx == 0) {
+			addFirst(item);
+		} else if (idx == size) {
+			addLast(item);
+		} else {
+			Node nn = new Node();
+			nn.data = item;
+			nn.next = null;
+
+			Node nn1 = getNodeAt(idx - 1);
+			Node np1 = nn1.next;
+			// Node np1 = getNodeAt(idx);
+
+			nn1.next = nn;
+			nn.next = np1;
+			this.size++;
+		}
+	}
+
 
 }
