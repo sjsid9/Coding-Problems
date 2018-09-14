@@ -19,6 +19,7 @@ public class PrintMazePathDiagonal {
 
 		printMazePath(cr + 1, cc, er, ec, ans + "H");
 		printMazePath(cr, cc + 1, er, ec, ans + "V");
+		printMazePath(cr + 1, cc + 1, er, ec, ans + "D");
 
 	}
 }
