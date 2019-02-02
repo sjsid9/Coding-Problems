@@ -2,7 +2,7 @@
 		removeDuplicates(this.head);
 	}
 
-	private Node removeDuplicates(Node head) {
+	private void removeDuplicates(Node head) {
 		Node temp = head;
 
 		while (head.next != null) {
@@ -12,7 +12,4 @@
 				head = head.next;
 			}
 		}
-
-		return temp;
-
 	}
